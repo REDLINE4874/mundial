@@ -71,6 +71,12 @@
       td {
         padding: 12px;
         border-bottom: 1px solid #ddd;
+        font-size: 20px;
+      }
+      td.puntos {
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
       }
 
       tr:hover {
@@ -175,8 +181,8 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>País</th>
-            <th>Participante</th>
+            <th style="text-align: left;">País</th>
+            <th style="text-align: left;">Participante</th>
             <th>Puntos</th>
             <th>Acciones</th>
           </tr>
@@ -296,7 +302,7 @@
 
             <td>${equipo.participante}</td>
 
-            <td><b>${equipo.puntos}</b></td>
+            <td class="puntos">${equipo.puntos}</td>
 
             <td class="acciones">
 
