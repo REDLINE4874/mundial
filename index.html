@@ -37,20 +37,18 @@
       }
 
       .header {
-    background-image: url("header.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+        background-image: url("header.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
-    min-height: 250px;
+        min-height: 220px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
       table {
         width: 100%;
@@ -75,6 +73,9 @@
       td.puntos {
         font-weight: bold;
         font-size: 40px;
+        text-align: center;
+      }
+      td.acciones {
         text-align: center;
       }
 
@@ -151,9 +152,7 @@
           padding: 8px;
         }
 
-        .header h1 {
-          font-size: 28px;
-        }
+        
         .pais-container {
           display: flex;
           align-items: left;
@@ -171,16 +170,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        
-      </div>
+      <div class="header"></div>
 
       <table>
         <thead>
           <tr>
             <th>#</th>
-            <th style="text-align: left;">País</th>
-            <th style="text-align: left;">Participante</th>
+            <th style="text-align: left">País</th>
+            <th style="text-align: left">Participante</th>
             <th>Puntos</th>
             <th>Acciones</th>
           </tr>
@@ -279,24 +276,24 @@
           html += `
         <tr>
             <td>
-    <div class="posicion-container">
-        <span class="posicion">
-            ${index + 1}
-        </span>
-        <span>${medalla}</span>
-    </div>
-</td>
+              <div class="posicion-container">
+                <span class="posicion">
+                  ${index + 1}
+                </span>
+                <span>${medalla}</span>
+              </div>
+            </td>
 
             <td>
-    <div class="pais-container">
-        <img
-            class="bandera"
-            src="https://flagcdn.com/w40/${equipo.bandera}.png"
-            alt="${equipo.pais}"
-        >
-        <span>${equipo.pais}</span>
-    </div>
-</td>
+              <div class="pais-container">
+                  <img
+                      class="bandera"
+                      src="https://flagcdn.com/w40/${equipo.bandera}.png"
+                      alt="${equipo.pais}"
+                  >
+                  <span>${equipo.pais}</span>
+              </div>
+            </td>
 
             <td>${equipo.participante}</td>
 
